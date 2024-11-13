@@ -1,0 +1,117 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:padding="16dp"
+        android:text="Product Entry"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+    <!-- Supplier Spinner -->
+    <TextView
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:text="Supplier:" />
+
+    <Spinner
+        android:id="@+id/spinnerSupplier"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+
+    <!-- Section RadioGroup -->
+    <TextView
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:text="Section:" />
+    <RadioGroup
+        android:id="@+id/radioGroupSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 1" />
+
+        <RadioButton
+            android:id="@+id/radioOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 2" />
+
+        <RadioButton
+            android:id="@+id/radioOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option 3" />
+    </RadioGroup>
+
+    <!-- Price Input -->
+    <EditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:hint="Price"
+        android:inputType="numberDecimal" />
+
+    <!-- Quantity Input -->
+    <EditText
+        android:id="@+id/editTextQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:hint="Quantity"
+        android:inputType="number" />
+
+    <!-- Date Input -->
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:hint="Date (dd/mm/yyyy)"
+        android:inputType="date" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF0000"
+            android:text="Close"
+            app:icon="@android:drawable/ic_delete" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back"
+            app:icon="@android:drawable/ic_input_delete" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            app:icon="@android:drawable/ic_menu_save" />
+    </LinearLayout>
+</LinearLayout>
