@@ -19,6 +19,7 @@ public class FormActivity extends AppCompatActivity {
     private EditText editTextQuantity;
     private EditText editTextDate;
     private Button buttonSave;
+    private Button buttonClose;
 
 
     @Override
@@ -32,11 +33,21 @@ public class FormActivity extends AppCompatActivity {
         editTextQuantity = findViewById(R.id.editTextQuantity);
         editTextDate = findViewById(R.id.editTextDate);
         buttonSave = findViewById(R.id.buttonSave);
+        buttonClose = findViewById(R.id.buttonClose);
 
         String[] suppliers = {"Supplier 1", "Supplier 2", "Supplier 3"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, suppliers);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSupplier.setAdapter(adapter);
+
+        buttonClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(FormActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
 
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override

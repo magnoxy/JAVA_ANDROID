@@ -67,6 +67,8 @@
         android:inputType="numberDecimal" />
 
     <!-- Quantity Input -->
+
+    <!-- Date Input -->
     <EditText
         android:id="@+id/editTextQuantity"
         android:layout_width="match_parent"
@@ -74,7 +76,6 @@
         android:hint="Quantity"
         android:inputType="number" />
 
-    <!-- Date Input -->
     <EditText
         android:id="@+id/editTextDate"
         android:layout_width="match_parent"
@@ -96,7 +97,7 @@
             android:layout_weight="1"
             android:backgroundTint="#FF0000"
             android:text="Close"
-            app:icon="@android:drawable/ic_delete" />
+            app:icon="@drawable/ic_launcher_foreground" />
 
         <Button
             android:id="@+id/buttonBack"
